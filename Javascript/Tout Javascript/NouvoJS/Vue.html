@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1ère APP</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="app">
+        <!--INTERPOLATION-->
+        <p>{{maVariable}}</p>
+    <div>
+        <label for="todo">Todo List</label>
+        <input type="text" id="todo" v-model="enteredValue" />
+        <button v-on:click="addTodo">Ajouter un truc à faire</button>
+    </div>
+    <ul>
+        <li v-for="todo in todos">{{todo}}</li>
+    </ul>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>

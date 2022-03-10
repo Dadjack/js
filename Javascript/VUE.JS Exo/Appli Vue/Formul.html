@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" href="Formul.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="Formul.js" defer></script>
+</head>
+<body>
+    <header>
+    <h1>LES EVENTS DEMO</h1>
+    </header>
+    <section id="user-goal">
+        <h2>{{Monster}}</h2>
+        <form v-on:submit.prevent="submitForm">
+            <input type="text"/>
+            <button>Se connecter</button>
+            <!-- <p>Votre Nom{{username}}</p> -->
+            <input type="submit">
+            <p>{{count}}</p>
+            <p v-once>{{countStart}}</p>
+        </form>
+        <!-- <p>{{count}}</p> -->
+        <input type="text"
+        v-on:input="setName"
+        v-on:keyup.enter="confirmationInput" 
+        />
+        <button v-on:click.left="addAjout">Ajouter</button>
+        <button v-on:click.middle="addSuppr">Supprimer</button>
+        <p>Votre Nom{{nameConfirmed}}</p>
+    </section>
+</body>
+</html>

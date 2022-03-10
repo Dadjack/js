@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" href="TodoListV2.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app2.js" defer></script>
+</head>
+<body>
+    <header>
+    <h1>Vue Todo List</h1>
+    <p>{{mesObjectifs}}</p>
+    </header>
+    <section id="user-goal">
+        <input type="text" id="todo" v-model="enteredValue" />
+        <button v-on:click="addTodo">Ajouter un truc à faire</button>
+    <h2>{{mesObjectifs}}</h2>
+    <p v-for="todo in todos">{{todo}}</p>
+    <p>{{numberOne}}</p>
+    <p>{{unObjet}}</p>
+    <p>{{maRemarque}}<a v-bind:href="vueLink">Lire la suite....</a></p>
+    <p>{{afficherObjectif()}}</p>
+    <p v-html= "afficherObjectif()"></p>
+    <!-- <p>{{objectif1}}</p>
+    <p>{{objectif2}}</p> -->
+    <!-- <p v-bind:number="45"></p> -->
+    </section>
+</body>
+</html>

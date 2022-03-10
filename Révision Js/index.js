@@ -1,0 +1,7 @@
+sommeAvecParam(){
+    window.prompt();
+}
+
+soustractionAvecParam(){
+
+}

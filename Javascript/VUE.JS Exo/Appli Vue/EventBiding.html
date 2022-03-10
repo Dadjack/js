@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" href="Event.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="EventBiding.js" defer></script>
+</head>
+<body>
+    <header>
+    <h1>LES EVENTS DEMO</h1>
+    </header>
+    <section id="user-goal">
+    <!-- <button v-on:click="addAjout(77)">Ajouter</button>
+    <button v-on:click="addSuppr(10)">Supprimer</button> -->
+        <button v-on:click="addAjout">Ajouter</button>
+        <button v-on:click="addSuppr">Supprimer</button>
+    <!-- <button v-on:click="count">Ajouter</button>
+    <button v-on:click="count">Supprimer</button> -->
+        <p>{{count}}</p>
+        <!-- <input type="text"  v-on:input="setName"/>
+        <button>Ajouter un truc à faire></button></br> -->
+        <input type="text"  v-bind:value ="username" />
+        <button v-on:click="resetInput">Reset</button>
+        <!-- <p>Votre Nom{{username}}</p> -->
+    </section>
+</body>
+</html>

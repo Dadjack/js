@@ -1,0 +1,1 @@
+// console.log(voiture.faiblesse[0, 1]= ["EssuiesGlaces", "capot"]);

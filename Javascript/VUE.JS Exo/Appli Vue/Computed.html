@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Events</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Computed.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="Computed.js" defer></script>
+</head>
+<body>
+    <header>
+    <h1>Vue Events</h1>
+    </header>
+    <section id="events">
+    <h2>Réagir aux Events du DOM</h2>
+    <button v-on:click.left='ajouter(10)'>Ajouter</button>
+    <button v-on:click.middle='reduire(10)'>Suppr.</button>
+    
+
+    <!-- <input type="text" 
+    v-bind:value="username"
+    v-on:input="setName($event, 'LASTICOT')"
+    v-on:keyup.enter="confirmationInput"> -->
+
+    <input type="text" v-model="username">
+    <button v-on:click="resetInput">Reset INPUT</button>
+
+    <p v-bind:style="{color:activeColor, fontSize: fontSize + 'px'}">Arnold{{ leFullName }}-{{fullName}}</p>
+
+    <!-- <p>Votre Nom {{fullName}}</p> -->
+
+    
+    
+    <!-- <p v-once>Resultat counter start: {{ counter }}</p>-->
+    <p v-bind:style="{color:activeColor, fontSize: fontSize + 'px'}">Resultat: {{ counter }}</p> 
+    <!--<p>Votre Nom {{ username }}</p> -->
+    <!--<p>Votre Nom confirmed {{ leNomConfirmed }}</p> -->
+        <div class="demo" ></div>
+        <div class="demo"></div>
+        <div class="demo"></div>
+
+        <form v-on:submit.prevent="submitForm">
+        <input type="text">
+        <button>Se connecter</button>
+    </form>
+    </section>
+</body>
+</html>
